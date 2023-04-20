@@ -238,7 +238,7 @@ select {
 }
 
 .primary-navigation {
-    --gap: 8rem;
+    --gap: 4rem;
     --underline-gap: 2rem;
     list-style: none;
     padding: 0;
@@ -276,6 +276,12 @@ select {
     --gap: 3rem;
 }
 
+.dot-indicators{
+    position: absolute;
+    margin-top: -80px;
+    padding: 0;
+}
+
 .dot-indicators > * {
     aspect-ratio: 1;
     padding: 0.65rem;
@@ -297,6 +303,8 @@ select {
 .number-indicators{
     flex-direction: column;
     align-items: center;
+    padding: 0;
+    margin-right: 50px
 }
 
 .number-indicators > *{
@@ -319,6 +327,32 @@ select {
     color: hsl( var(---clr-dark));
 }
 
+
+/* ---------------------- */
+/* Header */
+/* ---------------------- */
+
+.header{
+    position: absolute;
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 50px;
+    align-items: center;    
+}
+
+.logo{
+    width: 3rem;
+    height: 3rem;
+}
+
+.nav-bar{
+    background-color: hsl( var(---clr-dark));
+    opacity: 0.6 ;
+    margin-left: auto;
+    padding-right: 100px;
+    padding-left: 50px;
+}
+
 /* ---------------------- */
 /* Home page */
 /* ---------------------- */
@@ -330,6 +364,21 @@ select {
     height: 100vh;
 }
 
+.pos-abs{
+    margin-top: 180px;
+    margin-left: 165px;
+    position: absolute;
+}
+
+.homepage{
+    padding-top: 140px;
+    align-items: center;
+}
+
+.hometext{
+    width: 450px;
+    margin-right: 300px;
+}
 
 /* ---------------------- */
 /* Technologies page */
@@ -340,6 +389,20 @@ select {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+}
+
+.techNav{
+    margin-top: 50px;
+}
+
+.techDetails{
+    margin-top: 20px;
+    width: 470px
+}
+
+.techImage{
+    width: 385px;
+    height: 350px;
 }
 
 
@@ -354,6 +417,35 @@ select {
     height: 100vh;
 }
 
+.destinationPage{
+    margin-left: 200px;
+}
+
+.destinationNav{
+    justify-content: end;
+}
+
+.destinationtext{
+    width: 450px;
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+.planetImg{
+    width: 350px;
+    height: 350px;
+}
+
+.specs{
+    border-top: 1.5px solid hsl( var(---clr-white) / 0.25);
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.distance{
+    margin-right: 50px;
+}
+
 /* ---------------------- */
 /* Crews page */
 /* ---------------------- */
@@ -364,3 +456,23 @@ select {
     background-size: cover;
     height: 100vh;
 }
+
+.role {
+    opacity: 0.5;
+    margin-bottom: 1rem
+}
+
+.crewText{
+    width: 500px;
+    margin-top: 70px;
+}
+
+.crewImg{
+    height: 475px;
+}
+
+.crewDetails{
+    width: 450px;
+    margin-top: 30px;
+}
+
