@@ -323,8 +323,43 @@ select {
 /* Home page */
 /* ---------------------- */
 
-.home-image{
-    background-image: url('../public/images/home/background-home-desktop.jpg');
+.home-background{
+    background-image: url('./images/home/background-home-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/* ---------------------- */
+/* Technologies page */
+/* ---------------------- */
+
+.technologies-background{
+    background-image: url('./images/technology/background-technology-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/* ---------------------- */
+/* Destinations page */
+/* ---------------------- */
+
+.destinations-background{
+    background-image: url('./images/destinations/background-destination-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+/* ---------------------- */
+/* Crews page */
+/* ---------------------- */
+
+.crews-background{
+    background-image: url('./images/crews/background-crew-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;

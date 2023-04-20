@@ -30,21 +30,21 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route index element={<Home />} />
 
     <Route path="destination" element={<Destinations />}>
-      <Route path="moon" element={<Moon />} />
+      <Route index element={<Moon />}/>
       <Route path="mars" element={<Mars />} />
       <Route path="europa" element={<Europa />} />
       <Route path="titan" element={<Titan />} />
     </Route>
 
     <Route path="crew" element={<Crews />}>
-      <Route path="doug" element={<Doug />} />
+      <Route index element={<Doug />} />
       <Route path="mark" element={<Mark />} />
       <Route path="victor" element={<Victor />} />
       <Route path="anoush" element={<Anoush />} />
     </Route>
 
     <Route path="technology" element={<Technologies />}>
-      <Route path="launch" element={<Launch />} />
+      <Route index element={<Launch />} />
       <Route path="spaceport" element={<Spaceport />} />
       <Route path="spacecapsule" element={<Spacecapsule />} />
     </Route>
