@@ -4,7 +4,7 @@ import capsuleImage from "../../images/technology/image-space-capsule-portrait.j
 export default function Spacecapsule() {
     return (
         <div className="flex">
-            <div>
+            <div className="techDetails">
                 <p className="uppercase text-white letter-spacing-2">The terminology...</p>
                 <p className="fs-700 uppercase ff-serif">Space capsule</p>
                 <p className="text-accent">

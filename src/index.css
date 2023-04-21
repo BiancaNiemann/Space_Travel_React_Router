@@ -397,7 +397,8 @@ select {
 
 .techDetails{
     margin-top: 20px;
-    width: 470px
+    width: 470px;
+    margin-right: 75px;
 }
 
 .techImage{
