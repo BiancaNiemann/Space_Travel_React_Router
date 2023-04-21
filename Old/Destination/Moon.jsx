@@ -1,10 +1,15 @@
 import React from "react";
-import moonImage from "../../images/destinations/image-moon.png"
+import { useParams } from "react-router-dom";
+import moon from "../../images/destinations/image-moon.png"
 
 export default function Moon() {
+
+    const {id} = useParams()
+    let moonimg = id
+
     return (
         <div className="flex"> 
-            <img className="planetImg" src={moonImage} />
+            <img className="planetImg" src={moonimg} />
             <div className="destinationtext">
             <p className="fs-800 uppercase ff-serif">Moon</p>
             <p className="text-accent">  See our planet as you’ve never seen it before. A perfect relaxing trip away to help   regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>

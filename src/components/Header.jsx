@@ -11,9 +11,9 @@ export default function Header() {
             <nav className="flex nav-bar">
                 <ul className="primary-navigation underline-indicators flex ">
                     <Link to="/" className="underline uppercase text-white letter-spacing-2"><span className="number">00</span>Home</Link>
-                    <Link to="destination" className="underline uppercase text-white letter-spacing-2"><span className="number">01</span>Destination</Link>
-                    <Link to="crew" className="underline uppercase text-white letter-spacing-2"><span className="number">02</span>Crew</Link>
-                    <Link to="technology" className="underline uppercase text-white letter-spacing-2"><span className="number">03</span>Technology</Link>
+                    <Link to="destination/moon" className="underline uppercase text-white letter-spacing-2"><span className="number">01</span>Destination</Link>
+                    <Link to="crew/doug" className="underline uppercase text-white letter-spacing-2"><span className="number">02</span>Crew</Link>
+                    <Link to="technology/1" className="underline uppercase text-white letter-spacing-2"><span className="number">03</span>Technology</Link>
                 </ul>
             </nav>
         </header>
