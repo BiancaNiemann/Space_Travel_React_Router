@@ -210,13 +210,13 @@ select {
 
 .large-button{
     position: relative;
-    display: grid;
+    display: inline-grid;
     z-index: 1;
     border-radius: 50%;
     aspect-ratio: 1;
     text-decoration: none;
     place-items: center;
-    width: 15rem
+    padding: 0 2em
 }
 
 .large-button::after{
@@ -353,6 +353,10 @@ select {
     padding-left: 50px;
 }
 
+.hamburger{
+    display: none;
+}
+
 /* ---------------------- */
 /* Home page */
 /* ---------------------- */
@@ -361,6 +365,7 @@ select {
     background-image: url('./images/home/background-home-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    min-width: 1500px;
     height: 100vh;
 }
 
@@ -377,7 +382,7 @@ select {
 
 .hometext{
     width: 450px;
-    margin-right: 300px;
+    margin-right: 20rem;
 }
 
 /* ---------------------- */
@@ -477,3 +482,59 @@ select {
     margin-top: 30px;
 }
 
+/* ---------------------- */
+/* Media Queries Tablet */
+/* ---------------------- */
+
+@media only screen and (max-width: 800px) {
+    .home-background{
+        background-image: url('./images/home/background-home-tablet.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        min-width: 800px;
+    }
+    .header{
+        margin-top: 0;
+    }
+    .number{
+        display: none;
+    }
+    .flex{
+        gap: var(--gap, 0.5rem);
+    }
+    .pos-abs{
+        margin-left: 0;
+    }
+    .homepage{
+        flex-direction: column;
+        padding-top: 0px;
+        width: 800px;
+    }
+    .hometext{
+        margin: 0 auto 4rem;
+        text-align: center;
+    }
+    
+}
+
+@media only screen and (max-width: 670px) {
+    .home-background{
+        background-image: url('./images/home/background-home-mobile.jpg');
+        background-repeat: no-repeat;
+        min-width: 780px;
+    }
+    .header{
+        margin-top: 50px;
+    }
+    .hamburger{
+        display:inline-block;
+        margin-left: auto ;
+        padding-right: 50px
+    }
+    .nav-bar{
+        display: none;
+    }    
+    .homepage{
+        width: 670px;
+    }
+}
