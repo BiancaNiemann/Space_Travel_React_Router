@@ -2,10 +2,10 @@
 /*  Custom properties */
 /* ---------------------- */
 
-:root{
+:root {
     /* colors */
-    ---clr-dark:  230 35% 7% ;
-    ---clr-light: 231 77% 90% ;
+    ---clr-dark: 230 35% 7%;
+    ---clr-light: 231 77% 90%;
     ---clr-white: 0 0% 100%;
 
     /* font-sizes */
@@ -18,10 +18,10 @@
     --fs-300: 1rem;
     --fs-200: 0.875rem;
 
-     /* font-families */
-     --ff-serif: "Bellefair", serif;
-     --ff-sans-cond: "Barlow Condensed", sans-serif;
-     --ff-sans-normal: "Barlow", sans-serif;
+    /* font-families */
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
 }
 
 
@@ -52,6 +52,7 @@ figure,
 picture {
     margin: 0;
 }
+
 h1,
 h2,
 h3,
@@ -63,18 +64,18 @@ p {
 }
 
 /* set up the body */
-body{
+body {
     line-height: 1.5;
     min-height: 100vh;
     font-family: var(--ff-sans-normal);
     font-size: var(--fs-400);
-    color: hsl( var(---clr-white));
-    background-color: hsl( var(---clr-dark));
+    color: hsl(var(---clr-white));
+    background-color: hsl(var(---clr-dark));
 }
 
 /* make images easier to work with */
 
-img, 
+img,
 picture {
     max-width: 100%;
     display: block;
@@ -89,16 +90,17 @@ select {
 }
 
 /* remove animations for people that have turned them off */
-@media (prefers-reduced-motion: reduce) {  
+@media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
-  }
+}
 
 /* ---------------------- */
 /*  Utility classes */
@@ -114,12 +116,12 @@ select {
     gap: var(--gap, 1rem);
 }
 
-.flow > *:where(:not(:first-child)) {
-    margin-top:  var(--flow-space, 1rem);
+.flow>*:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
 }
 
 .container {
-    padding-inline: 2em; 
+    padding-inline: 2em;
     max-width: 80rem;
     margin-inline: auto;
 }
@@ -132,56 +134,98 @@ select {
     margin: -1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
-    white-space: nowrap; /* added line */
+    white-space: nowrap;
+    /* added line */
     border: 0;
 }
 
 /* colors */
 
-.bg-dark{
-    background-color: hsl( var(---clr-dark));
+.bg-dark {
+    background-color: hsl(var(---clr-dark));
 }
 
-.bg-light{
-    background-color: hsl( var(---clr-light));
+.bg-light {
+    background-color: hsl(var(---clr-light));
 }
 
-.bg-white{
-    background-color: hsl( var(---clr-white));
+.bg-white {
+    background-color: hsl(var(---clr-white));
 }
 
-.text-dark{
-    color: hsl( var(---clr-dark));
+.text-dark {
+    color: hsl(var(---clr-dark));
 }
 
-.text-light{
-    color: hsl( var(---clr-light));
+.text-light {
+    color: hsl(var(---clr-light));
 }
 
-.text-white{
-    color: hsl( var(---clr-white));
+.text-white {
+    color: hsl(var(---clr-white));
 }
 
 /* typography */
 
-.ff-serif { font-family: var(--ff-serif); } 
-.ff-sans-cond { font-family: var(--ff-sans-cond); } 
-.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+.ff-serif {
+    font-family: var(--ff-serif);
+}
 
-.letter-spacing-1 { letter-spacing: 4.75px; } 
-.letter-spacing-2 { letter-spacing: 2.7px; } 
-.letter-spacing-3 { letter-spacing: 2.35px; } 
+.ff-sans-cond {
+    font-family: var(--ff-sans-cond);
+}
 
-.uppercase { text-transform: uppercase; }
+.ff-sans-normal {
+    font-family: var(--ff-sans-normal);
+}
 
-.fs-900 { font-size: var(--fs-900); }
-.fs-800 { font-size: var(--fs-800); }
-.fs-700 { font-size: var(--fs-700); }
-.fs-600 { font-size: var(--fs-600); }
-.fs-500 { font-size: var(--fs-500); }
-.fs-400 { font-size: var(--fs-400); }
-.fs-300 { font-size: var(--fs-300); }
-.fs-200 { font-size: var(--fs-200); }
+.letter-spacing-1 {
+    letter-spacing: 4.75px;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2.7px;
+}
+
+.letter-spacing-3 {
+    letter-spacing: 2.35px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.fs-900 {
+    font-size: var(--fs-900);
+}
+
+.fs-800 {
+    font-size: var(--fs-800);
+}
+
+.fs-700 {
+    font-size: var(--fs-700);
+}
+
+.fs-600 {
+    font-size: var(--fs-600);
+}
+
+.fs-500 {
+    font-size: var(--fs-500);
+}
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+
+.fs-300 {
+    font-size: var(--fs-300);
+}
+
+.fs-200 {
+    font-size: var(--fs-200);
+}
 
 
 .fs-900,
@@ -191,24 +235,24 @@ select {
     line-height: 1.1;
 }
 
-.numbered-title{
+.numbered-title {
     font-family: var(--ff-sans-cond);
     font-size: var(--fs-500);
     text-transform: uppercase;
     letter-spacing: 4.72px;
 }
 
-.numbered-title span{
+.numbered-title span {
     margin-right: .5em;
     font-weight: 700;
-    color: hsl( var(---clr-white) /0.25);
+    color: hsl(var(---clr-white) /0.25);
 }
 
 /* ---------------------- */
 /*  Components */
 /* ---------------------- */
 
-.large-button{
+.large-button {
     position: relative;
     display: inline-grid;
     z-index: 1;
@@ -219,10 +263,10 @@ select {
     padding: 0 2em
 }
 
-.large-button::after{
+.large-button::after {
     content: "";
     position: absolute;
-    background: hsl( var(---clr-white) /0.15);
+    background: hsl(var(---clr-white) /0.15);
     width: 100%;
     height: 100%;
     border-radius: inherit;
@@ -232,7 +276,7 @@ select {
 }
 
 .large-button:hover::after,
-.large-button:focus::after{
+.large-button:focus::after {
     transform: scale(1.5);
     opacity: 1;
 }
@@ -249,82 +293,83 @@ select {
     text-decoration: none;
 }
 
-.primary-navigation a > span {
+.primary-navigation a>span {
     font-weight: 700;
     margin-right: .5em;
 }
 
-.underline-indicators > * {
+.underline-indicators>* {
     cursor: pointer;
     padding: var(--underline-gap, 1rem) 0;
     border: 0;
-    border-bottom: .2rem solid hsl( var(---clr-white) / 0 );
+    border-bottom: .2rem solid hsl(var(---clr-white) / 0);
 }
 
 .underline:hover,
-.underline:focus{
-    border-color: hsl( var(---clr-white) / .5);
+.underline:focus {
+    border-color: hsl(var(---clr-white) / .5);
 }
 
-.underline-indicators > .active,
-.underline-indicators > [aria-selected="true"]{
-    color:  hsl( var(--clr-white) / 1);;
-    border-color: hsl( var(--clr-white) / 1);
+.underline-indicators>.active,
+.underline-indicators>[aria-selected="true"] {
+    color: hsl(var(--clr-white) / 1);
+    ;
+    border-color: hsl(var(--clr-white) / 1);
 }
 
-.tab-list{
+.tab-list {
     --gap: 3rem;
 }
 
-.dot-indicators{
+.dot-indicators {
     position: absolute;
     margin-top: -80px;
     padding: 0;
 }
 
-.dot-indicators > * {
+.dot-indicators>* {
     aspect-ratio: 1;
     padding: 0.65rem;
     border-radius: 50%;
     cursor: pointer;
-    background-color: hsl( var(---clr-white) / 0.25);
+    background-color: hsl(var(---clr-white) / 0.25);
     border: none;
 }
 
-.dot-indicators > *:hover,
-.dot-indicators > *:focus {
-    background-color: hsl( var(---clr-white) / 0.5);
+.dot-indicators>*:hover,
+.dot-indicators>*:focus {
+    background-color: hsl(var(---clr-white) / 0.5);
 }
 
-.dot-indicators > [aria-selected="true"]{
-    background-color: hsl( var(---clr-white) / 1);
+.dot-indicators>[aria-selected="true"] {
+    background-color: hsl(var(---clr-white) / 1);
 }
 
-.number-indicators{
+.number-indicators {
     flex-direction: column;
     align-items: center;
     padding: 0;
     margin-right: 50px
 }
 
-.number-indicators > *{
+.number-indicators>* {
     aspect-ratio: 1;
     padding: 1em 1.25em;
     border-radius: 50%;
     cursor: pointer;
-    background-color: hsl( var(---clr-dark));
-    border: 0.05em solid hsl( var(---clr-white) / .25);
-    color: hsl( var(---clr-white));
+    background-color: hsl(var(---clr-dark));
+    border: 0.05em solid hsl(var(---clr-white) / .25);
+    color: hsl(var(---clr-white));
 }
 
-.number-indicators > *:hover,
-.number-indicators > *:focus {
-    border-color: hsl( var(---clr-white));
+.number-indicators>*:hover,
+.number-indicators>*:focus {
+    border-color: hsl(var(---clr-white));
 }
 
-.number-indicators > [aria-selected="true"] {
-    background-color: hsl( var(---clr-white));
-    color: hsl( var(---clr-dark));
+.number-indicators>[aria-selected="true"] {
+    background-color: hsl(var(---clr-white));
+    color: hsl(var(---clr-dark));
 }
 
 
@@ -332,28 +377,28 @@ select {
 /* Header */
 /* ---------------------- */
 
-.header{
+.header {
     position: absolute;
     width: 100%;
     margin-top: 40px;
     margin-left: 50px;
-    align-items: center;    
+    align-items: center;
 }
 
-.logo{
+.logo {
     width: 3rem;
     height: 3rem;
 }
 
-.nav-bar{
-    background-color: hsl( var(---clr-dark));
-    opacity: 0.6 ;
+.nav-bar {
+    background-color: hsl(var(---clr-dark));
+    opacity: 0.6;
     margin-left: auto;
     padding-right: 100px;
     padding-left: 50px;
 }
 
-.hamburger{
+.hamburger {
     display: none;
 }
 
@@ -361,7 +406,7 @@ select {
 /* Home page */
 /* ---------------------- */
 
-.home-background{
+.home-background {
     background-image: url('./images/home/background-home-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -369,18 +414,18 @@ select {
     height: 100vh;
 }
 
-.pos-abs{
+.pos-abs {
     margin-top: 180px;
     margin-left: 165px;
     position: absolute;
 }
 
-.homepage{
+.homepage {
     padding-top: 140px;
     align-items: center;
 }
 
-.hometext{
+.hometext {
     width: 450px;
     margin-right: 20rem;
 }
@@ -389,66 +434,72 @@ select {
 /* Technologies page */
 /* ---------------------- */
 
-.technologies-background{
+.technologies-background {
     background-image: url('./images/technology/background-technology-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
 }
 
-.techNav{
-    margin-top: 50px;
+.techContainer {
+    margin-top: 0.5rem;
+    align-items: center;
 }
 
-.techDetails{
+.techDetails {
     margin-top: 20px;
     width: 470px;
     margin-right: 75px;
 }
 
-.techImage{
+.techImage {
     width: 385px;
     height: 350px;
 }
+
+.landscape {
+    display: none;
+}
+
 
 
 /* ---------------------- */
 /* Destinations page */
 /* ---------------------- */
 
-.destinations-background{
+.destinations-background {
     background-image: url('./images/destinations/background-destination-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
 }
 
-.destinationPage{
+.destinationPage {
     margin-left: 200px;
 }
 
-.destinationNav{
+.destinationNav {
     justify-content: end;
 }
 
-.destinationtext{
+.destinationtext {
     width: 450px;
     margin-left: 200px;
     margin-top: 20px;
 }
 
-.planetImg{
+.planetImg {
     width: 350px;
     height: 350px;
 }
 
-.specs{
-    border-top: 1.5px solid hsl( var(---clr-white) / 0.25);
+.specs {
+    border-top: 1.5px solid hsl(var(---clr-white) / 0.25);
     margin-top: 20px;
     padding-top: 10px;
 }
 
-.distance{
+.distance {
     margin-right: 50px;
 }
 
@@ -456,7 +507,7 @@ select {
 /* Crews page */
 /* ---------------------- */
 
-.crews-background{
+.crews-background {
     background-image: url('./images/crews/background-crew-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -468,16 +519,18 @@ select {
     margin-bottom: 1rem
 }
 
-.crewText{
+.crewText {
     width: 500px;
     margin-top: 70px;
 }
 
-.crewImg{
+.crewImg {
     height: 475px;
+    margin-left: 10rem;
+    margin-top: 3.5rem
 }
 
-.crewDetails{
+.crewDetails {
     width: 450px;
     margin-top: 30px;
 }
@@ -487,54 +540,243 @@ select {
 /* ---------------------- */
 
 @media only screen and (max-width: 800px) {
-    .home-background{
+    .home-background {
         background-image: url('./images/home/background-home-tablet.jpg');
         background-repeat: no-repeat;
         background-position: center;
         min-width: 800px;
+        height: 1024px;
     }
-    .header{
+
+    .header {
         margin-top: 0;
     }
-    .number{
+
+    .number {
         display: none;
     }
-    .flex{
+
+    .flex {
         gap: var(--gap, 0.5rem);
     }
-    .pos-abs{
+
+    .pos-abs {
         margin-left: 0;
     }
-    .homepage{
+
+    .homepage {
         flex-direction: column;
         padding-top: 0px;
         width: 800px;
     }
-    .hometext{
+
+    .hometext {
         margin: 0 auto 4rem;
         text-align: center;
     }
-    
+
+    .landscape {
+        display: block;
+    }
+
+    .portrait {
+        display: none;
+    }
+
+    .destinations-background {
+        background-image: url('./images/destinations/background-destination-tablet.jpg');
+        min-width: 800px;
+        height: 1024px;
+    }
+
+    .numbered-title {
+        width: 800px;
+        padding-left: 50px;
+    }
+
+    .planetImg {
+        margin-top: 50px;
+        width: 800px;
+        height: 300px;
+    }
+
+    .planetImgSize {
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .destinationNav {
+        justify-content: center;
+    }
+
+    .destinationtext {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .destinationDescription {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px 0 50px;
+        border-bottom: 1.5px solid hsl(var(---clr-white) / 0.25);
+    }
+
+    .specs {
+        border: none;
+        justify-content: center;
+    }
+
+    .crews-background {
+        background-image: url('./images/crews/background-crew-tablet.jpg');
+        min-width: 800px;
+    }
+
+    .crewText {
+        width: 800px;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .crewImg {
+        height: 24em;
+        margin: 0 auto;
+    }
+
+    .crewDetails {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .dot-indicators {
+        position: relative;
+        margin-top: 1.25rem;
+        justify-content: center;
+        gap: 1.25rem;
+    }
+
+    .technologies-background {
+        background-image: url('./images/technology/background-technology-tablet.jpg');
+        min-width: 800px;
+    }
+
+    .techContainer {
+        flex-direction: column;
+    }
+
+    .techImage {
+        width: 800px;
+        margin-top: 3rem;
+    }
+
+    .techDetails {
+        margin-top: 0.5rem;
+        width: 500px;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .techDescription {
+        margin-top: 2rem;
+    }
+
+    .number-indicators {
+        flex-direction: row;
+    }
+
 }
 
 @media only screen and (max-width: 670px) {
-    .home-background{
+    .home-background {
         background-image: url('./images/home/background-home-mobile.jpg');
         background-repeat: no-repeat;
-        min-width: 780px;
+        min-width: 670px;
     }
-    .header{
+
+    .header {
         margin-top: 50px;
     }
-    .hamburger{
-        display:inline-block;
-        margin-left: auto ;
-        padding-right: 50px
+
+    .hamburger {
+        display: inline-block;
+        margin-left: auto;
+        padding-right: 100px
     }
-    .nav-bar{
+
+    .nav-bar {
         display: none;
-    }    
-    .homepage{
+    }
+
+    .homepage {
         width: 670px;
     }
+
+    .destinations-background {
+        background-image: url('./images/destinations/background-destination-mobile.jpg');
+        min-width: 670px;
+    }
+
+    .numbered-title {
+        width: 670px;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .planetImg {
+        width: 670px;
+        height: 200px;
+    }
+
+    .planetImgSize {
+        height: 200px;
+        margin: 0 auto;
+    }
+
+    .destinationNav {
+        justify-content: center;
+    }
+
+    .destinationDescription {
+        width: 60%;
+    }
+
+    .specs {
+        flex-direction: column;
+    }
+
+    .distance {
+        margin-right: 0;
+    }
+
+    .crews-background {
+        background-image: url('./images/crews/background-crew-mobile.jpg');
+        min-width: 670px;
+    }
+
+    .mobileRender {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 670px;
+    }
+
+    .crewImgContainer {
+        width: 500px;
+        border-bottom: 1.5px solid hsl(var(---clr-white) / 0.25);
+        margin: 20px;
+    }
+
+    .crewImg {
+        height: 18rem;
+    }
+
+    .crewDetails {
+        width: 48%;
+    }
+
+    .technologies-background {
+        background-image: url('./images/technology/background-technology-tablet.jpg');
+        min-width: 670px;
+    }
+
 }
