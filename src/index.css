@@ -381,7 +381,6 @@ select {
     position: absolute;
     width: 100%;
     margin-top: 40px;
-    margin-left: 50px;
     align-items: center;
 }
 
@@ -389,17 +388,23 @@ select {
     width: 3rem;
     height: 3rem;
     position: relative;
+    margin-left: 3rem;
 }
 
 .nav-bar {
-    background-color: hsl(var(---clr-dark));
-    opacity: 0.6;
+    background-color: hsl(var(---clr-white) / .1);
+    backdrop-filter: blur(6.9px);
+    -webkit-backdrop-filter: blur(6.9px);
     margin-left: auto;
     padding-right: 100px;
     padding-left: 50px;
 }
 
 .icon {
+    display: none;
+}
+
+.navModal{
     display: none;
 }
 
@@ -412,7 +417,6 @@ select {
     background-image: url('./images/home/background-home-desktop.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 1500px;
     height: 100vh;
 }
 
@@ -691,7 +695,7 @@ select {
         min-width: 670px;
     }
 
-    .logo{
+    .logo {
         margin-top: 2.5rem;
         margin-left: 2.5rem;
     }
@@ -702,24 +706,26 @@ select {
         align-items: start;
     }
 
-    .hamburger{
+    .hamburger {
         margin-left: auto;
         margin-top: 3.5rem;
         margin-right: 3.5rem;
     }
 
-    .close{
+    .close {
         margin-left: 150px;
     }
 
     .navModal {
-        background-color: hsl(var(---clr-dark));
-        opacity: 0.75;
+        display: block;
+        background-color: hsl(var(---clr-white) / .1);
         margin-left: auto;
         padding: 60px 70px;
         margin-top: 0;
         z-index: 10;
         height: 1024px;
+        backdrop-filter: blur(6.9px);
+        -webkit-backdrop-filter: blur(6.9px);
     }
 
     .icon {
@@ -806,8 +812,9 @@ select {
         width: 48%;
     }
 
-    .crewText{
-        width: 670px;;
+    .crewText {
+        width: 670px;
+        ;
     }
 
     .technologies-background {
