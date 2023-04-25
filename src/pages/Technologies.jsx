@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, Outlet } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import data from "../data.json"
 import { useParams } from "react-router-dom"
 
@@ -7,7 +7,7 @@ export default function Technologies() {
     const { id } = useParams()
 
     const getNav = data.technology.map(item => (
-        <Link key={(item.id).toString()} to={(item.id).toString()}>{item.id}</Link>
+        <NavLink key={(item.id).toString()} to={(item.id).toString()}>{item.id}</NavLink>
     ))
 
     const renderTechnologyHtml = data.technology.map(item => {
@@ -44,7 +44,7 @@ export default function Technologies() {
                         </div>
                 <div className="flex techContainer">
                     <nav className="flex">
-                        <ul className="number-indicators flex ">
+                        <ul className="number-indicators flex">
                             {getNav}
                         </ul>
                     </nav>

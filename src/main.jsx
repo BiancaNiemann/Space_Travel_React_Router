@@ -10,9 +10,9 @@ import {
 
 import Layout from './components/Layout'
 import Home from './pages/Home'
-import Destinations from './components/Destinations'
-import Crews from './components/Crews'
-import Technologies from './components/Technologies'
+import Destinations from './pages/Destinations'
+import Crews from './pages/Crews'
+import Technologies from './pages/Technologies'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Layout />}>

@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, Outlet } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import data from "../data.json"
 import { useParams } from "react-router-dom"
 
@@ -8,7 +8,7 @@ export default function Destinations() {
     const { id } = useParams()
 
     const getNav = data.destinations.map(item => (
-        <Link key={item.name} to={(item.name).toLowerCase()} className="underline uppercase text-white letter-spacing-2">{item.name}</Link>
+        <NavLink key={item.name} to={(item.name).toLowerCase()} className="underline uppercase text-white letter-spacing-2">{item.name}</NavLink>
     ))
 
     const renderDestinationHtml = data.destinations.map(item => {
@@ -35,7 +35,7 @@ export default function Destinations() {
     const renderDestinationImageHtml = data.destinations.map(item => {
         if ((item.name).toLowerCase() === id) {
             return (
-                <img src={(item.images)} className="planetImgSize"/>
+                <img src={(item.images)} className="planetImgSize" key={item.name} />
             )
         }
     })

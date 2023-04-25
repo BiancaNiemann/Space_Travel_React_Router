@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, Outlet } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import data from "../data.json"
 import { useParams } from "react-router-dom"
 
@@ -7,7 +7,7 @@ export default function Crews() {
     const { id } = useParams()
 
     const getNav = data.crew.map(item => (
-        <Link key={item.nickname} to={(item.nickname).toLowerCase()}><span className="sr-only">{item.name}</span></Link>
+        <NavLink key={item.nickname} to={(item.nickname).toLowerCase()}><span className="sr-only">{item.name}</span></NavLink>
     ))
 
     const renderCrewHtml = data.crew.map(item => {
@@ -27,7 +27,7 @@ export default function Crews() {
     const renderCrewImageHtml = data.crew.map(item => {
         if ((item.nickname).toLowerCase() === id) {
             return (
-                <div className="crewImgContainer">
+                <div className="crewImgContainer" key={item.nickname} >
                     <img className="crewImg" src={item.images} />
                 </div>
             )
