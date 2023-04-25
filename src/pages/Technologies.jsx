@@ -14,10 +14,10 @@ export default function Technologies() {
         if (item.id === Number(id)) {
             return (
                 <div className="flex" key={item.id}>
-                    <div className="techDetails">
+                    <div>
                         <p className="uppercase text-white letter-spacing-2">The terminology...</p>
                         <p className="fs-700 uppercase ff-serif">{item.name}</p>
-                        <p className="text-accent techDescription">{item.description}</p>
+                        <p className="text-accent maintext">{item.description}</p>
                     </div>
                 </div>
             )
@@ -28,8 +28,8 @@ export default function Technologies() {
         if (item.id === Number(id)) {
             return (
                 <div key={item.id}>
-                    <img className="techImage portrait" src={item.imageNamePortrait} />
-                    <img className="techImage landscape" src={item.imageNameLandscape} />
+                    <img className="techPortrait" src={item.imageNamePortrait} />
+                    <img className="techLandscape" src={item.imageNameLandscape} />
                 </div>
             )
         }
@@ -37,25 +37,28 @@ export default function Technologies() {
 
     return (
         <div className="technologies-background">
-            <div className="pos-abs">
+            <div className="positionPage">
                 <h2 className="numbered-title"><span>03</span>Space Launch 101</h2>
-                <div className="techImg landscape">
-                            {renderTechnologyImageHtml}
-                        </div>
-                <div className="flex techContainer">
-                    <nav className="flex">
-                        <ul className="number-indicators flex">
-                            {getNav}
-                        </ul>
-                    </nav>
-                    <div className="flex">
+                <div className="container">
+                    <div className="techLandscape">
+                        {renderTechnologyImageHtml}
+                    </div>
+                    <div className="techNav">
+                        <nav className="flex">
+                            <ul className="number-indicators flex ">
+                                {getNav}
+                            </ul>
+                        </nav>
+                    </div>
+                    <div>
                         {renderTechnologyHtml}
-                        <div className="portrait">
-                            {renderTechnologyImageHtml}
-                        </div>
+                    </div>
+                    <div className="techPortrait">
+                        {renderTechnologyImageHtml}
                     </div>
                 </div>
             </div>
         </div>
     )
 }
+/**/

@@ -8,15 +8,15 @@ export default function Destinations() {
     const { id } = useParams()
 
     const getNav = data.destinations.map(item => (
-        <NavLink key={item.name} to={(item.name).toLowerCase()} className="underline uppercase text-white letter-spacing-2">{item.name}</NavLink>
+        <NavLink key={item.name} to={(item.name).toLowerCase()} className="underline uppercase text-white letter-spacing-2 navwrap">{item.name}</NavLink>
     ))
 
     const renderDestinationHtml = data.destinations.map(item => {
         if ((item.name).toLowerCase() === id) {
             return (
-                <div className="destinationtext" key={item.name}>
-                    <p className="fs-800 uppercase ff-serif">{item.name}</p>
-                    <p className="text-accent destinationDescription">{item.description}</p>
+                <div key={item.name}>
+                    <p className="fs-800 uppercase ff-serif destinationName">{item.name}</p>
+                    <p className="text-accent maintext">{item.description}</p>
                     <div className="flex specs" >
                         <div className="distance">
                             <p className="fs-200 uppercase ff-sans-cond letter-spacing-3">Avg. Distance</p>
@@ -42,21 +42,23 @@ export default function Destinations() {
 
     return (
         <div className="destinations-background ">
-            <div className="pos-abs destinationPage">
+            <div className="positionPage">
                 <h2 className="numbered-title"><span>01</span>Pick your destination</h2>
-                <div className="planetImg landscape">
+                <div className="container">
+                    <div></div>
+                    <div className="planetImg">
                         {renderDestinationImageHtml}
                     </div>
-                <nav className="flex destinationNav">
-                    <ul className="primary-navigation underline-indicators flex ">
-                        {getNav}
-                    </ul>
-                </nav>
-                <div className="flex">
-                    <div className="planetImg portrait">
-                        {renderDestinationImageHtml}
+                    <div>
+                        <nav>
+                            <ul className="primary-navigation underline-indicators flex secondaryNav">
+                                {getNav}
+                            </ul>
+                        </nav>
+                        <div>
+                            {renderDestinationHtml}
+                        </div>
                     </div>
-                    {renderDestinationHtml}
                 </div>
             </div>
         </div>
